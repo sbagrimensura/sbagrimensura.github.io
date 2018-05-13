@@ -4109,6 +4109,26 @@
 			opacity: 1;
 		}
 
+		@media screen and (max-width: 320px) {
+
+			#banner p {
+				font-size: 1em;
+			}
+
+		}
+
+		body.is-loading #banner .inner {
+			-moz-transform: scale(0.69);
+			-webkit-transform: scale(0.69);
+			-ms-transform: scale(0.69);
+			transform: scale(0.69);
+			opacity: 0;
+		}
+
+		body.is-loading #banner:before {
+			opacity: 1;
+}
+
 /* Footer */
 
 	#footer {
