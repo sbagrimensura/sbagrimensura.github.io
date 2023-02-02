@@ -68,6 +68,25 @@
     })();
    </script>  
 
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript">
+  function sendEmail() {
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username: "topometrica.contato@gmmail.com",
+      Attachments: [
+        {
+          name: "File_Name_with_Extension",
+          path: "Full Path of the file"
+        }]
+    })
+      .then(function (message) {
+        alert("E-mail encaminhado com sucesso!")
+      });
+  }
+</script>
+
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container-fluid">
@@ -869,7 +888,7 @@
               <div class="error-message"></div>
               <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
             </div>
-            <div class="text-center"><button type="submit">Solicitar orçamento</button></div>
+            <div class="text-center"><button type="submit" onclick="sendMail()">Solicitar orçamento</button></div>
           </form>
         </div>
 
